@@ -46,6 +46,14 @@ public class Student {
     public String[] getRegisteredNextSemester() {
         return registeredNextSemester;
     }
+
+    // loads registered courses from file into next semester array 
+    public void setRegisteredNextSemester(String[] courses) { 
+        for (int i = 0; i < courses.length && i < registeredNextSemester.length; i++) {
+            registeredNextSemester[i] = courses[i].trim();
+        }
+    }
+
     
     // checks if student completed all prerequisites 
     public boolean hasTakenPrereqs( String[] requiredPrereqs) {
